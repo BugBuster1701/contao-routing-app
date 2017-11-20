@@ -1,6 +1,5 @@
-# app/config/config.yml
 services:
-    app.user_navigation_listener:
+    routing_app.user_navigation_listener:
         class: "BugBuster\\RoutingappBundle\\EventListener\\UserNavigationListener"
         arguments:
             - "@request_stack"
