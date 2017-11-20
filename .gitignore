@@ -1,0 +1,10 @@
+# Transifex
+/.tx/
+#for development in vbox
+src/vendor/
+src/composer.json
+composer.lock
+#IDE
+.buildpath
+.project
+.settings/

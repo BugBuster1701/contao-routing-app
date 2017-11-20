@@ -1,0 +1,51 @@
+{
+	"name":"bugbuster/contao-routing-app",
+	"description":"Code Beispiel für die drei Routing Arten in Contao 4",
+	"keywords":["Code sample","contao","routing"],
+	"type":"contao-bundle",
+	"homepage":"http://contao.ninja",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Glen Langer",
+			"homepage":"http://contao.ninja",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"issues":"https://github.com/BugBuster1701/contao-routing-app/issues",
+		"irc":"irc://irc.freenode.org/contao.dev",
+		"source":"https://github.com/BugBuster1701/contao-routing-app",
+		"forum":"https://community.contao.org/de/forumdisplay.php?119-Sonstige-Erweiterungen"
+	},
+	"require":{
+		"php": ">=5.6.0",
+		"contao/core-bundle": ">=4.4.4,<5.0"
+	},
+	"conflict": {
+			"contao/manager-plugin": "<2.0 || >=3.0",
+			"symfony/symfony": "3.2.7"
+	},
+	"autoload":{
+			"psr-4": {
+					"BugBuster\\RoutingappBundle\\": "src/"
+		},
+		"classmap": [
+					"src/Resources/contao/"
+		],
+		"exclude-from-classmap": [
+					"src/Resources/contao/cache/",
+					"src/Resources/contao/config/",
+					"src/Resources/contao/dca/",
+					"src/Resources/contao/languages/",
+					"src/Resources/contao/templates/",
+					"src/Resources/contao/test/"
+		]
+	},
+	"extra":{
+		"branch-alias": {
+			"dev-develop": "1.0.x-dev"
+		},
+		"contao-manager-plugin": "BugBuster\\RoutingappBundle\\ContaoManager\\Plugin"
+	}
+}
