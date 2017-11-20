@@ -18,7 +18,7 @@ class BackendController extends Controller
 {
     /**
      * @Route("/main", name="backend_test")
-     * @Template("AppBundle::test.html.twig")
+     * @Template("BugBusterRoutingappBundle::test.html.twig")
      */
     public function testAction()
     {
