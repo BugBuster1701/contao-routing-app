@@ -11,19 +11,19 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  *     "_scope" = "backend",
  *     "_token_check" = true,
  *     "_custom_backend_view" = true,
- *     "_backend_module" = "test"
+ *     "_backend_module" = "bemain"
  * })
  */
 class BackendController extends Controller
 {
     /**
-     * @Route("/main", name="backend_test")
-     * @Template("BugBusterRoutingappBundle::test.html.twig")
+     * @Route("/main", name="backend_maintest")
+     * @Template("BugBusterRoutingappBundle::bemain.html.twig")
      */
-    public function testAction()
+    public function bemainAction()
     {
         return [
-            'content' => 'Content'
+            'content' => '<br>Content from the BE Controller Action'
         ];
     }
 }

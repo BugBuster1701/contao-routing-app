@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
  *
  * @author Glen Langer (BugBuster)
  */
-class Plugin implements BundlePluginInterface, RoutingPluginInterface
+class ContaoManagerPlugin implements BundlePluginInterface, RoutingPluginInterface
 {
     /**
      * {@inheritdoc}

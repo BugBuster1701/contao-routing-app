@@ -18,15 +18,15 @@ class UserNavigationListener
 
     public function onGetUserNavigation($arrModules, $blnShowAll)
     {
-        $arrModules['content']['modules']['test'] = [
+        $arrModules['content']['modules']['bemain'] = [
             'title' => 'A backend route test module',
-            'label' => 'Test',
+            'label' => 'Be Main Test',
             'class' => 'navigation test',
-            'href'  => $this->router->generate('backend_test')
+            'href'  => $this->router->generate('backend_maintest')
         ];
 
-        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'test') {
-            $arrModules['content']['modules']['test']['class'] .= ' active';
+        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') {
+            $arrModules['content']['modules']['bemain']['class'] .= ' active';
         }
 
         return $arrModules;

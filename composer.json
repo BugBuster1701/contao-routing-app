@@ -46,6 +46,6 @@
 		"branch-alias": {
 			"dev-develop": "1.0.x-dev"
 		},
-		"contao-manager-plugin": "BugBuster\\RoutingappBundle\\ContaoManager\\Plugin"
+		"contao-manager-plugin": "BugBuster\\RoutingappBundle\\ContaoManager\\ContaoManagerPlugin"
 	}
 }
