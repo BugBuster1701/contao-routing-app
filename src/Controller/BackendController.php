@@ -23,7 +23,7 @@ class BackendController extends Controller
     public function bemainAction()
     {
         return [
-            'content' => '<br>Content from the BE Controller Action'
+            'main' => '<br>Content from the BE Controller Action'
         ];
     }
 }
