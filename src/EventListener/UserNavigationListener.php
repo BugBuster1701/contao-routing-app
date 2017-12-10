@@ -30,6 +30,10 @@ class UserNavigationListener
             $arrModules['content']['modules']['bemain']['isActive'] = true;    // neues BE Theme
             
         }
+        
+        //use app_dev.php to dump
+        //dump($arrModules['content']['modules']);
+        
 
         return $arrModules;
     }
