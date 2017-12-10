@@ -13,9 +13,16 @@ class UserNavigationListener
     public function __construct(RequestStack $requestStack, RouterInterface $router)
     {
         $this->requestStack = $requestStack;
-        $this->router = $router;
+        $this->router       = $router;
     }
 
+    /**
+     * onGetUserNavigation
+     * 
+     * @param array $arrModules     The compiled list of back end modules.
+     * @param boolean $blnShowAll   Wether to show all modules even if the group is collapsed.
+     * @return array                Add your custom modules to the list and return the array of back end modules.
+     */
     public function onGetUserNavigation($arrModules, $blnShowAll)
     {
         $arrModules['content']['modules']['bemain'] = [
@@ -25,7 +32,8 @@ class UserNavigationListener
             'href'  => $this->router->generate('backend_maintest')
         ];
 
-        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') {
+        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') 
+        {
             $arrModules['content']['modules']['bemain']['class'] .= ' active'; // altes BE Theme
             $arrModules['content']['modules']['bemain']['isActive'] = true;    // neues BE Theme
             
