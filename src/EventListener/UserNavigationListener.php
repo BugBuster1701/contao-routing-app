@@ -21,12 +21,14 @@ class UserNavigationListener
         $arrModules['content']['modules']['bemain'] = [
             'title' => 'A backend route test module',
             'label' => 'Be Main Test',
-            'class' => 'navigation test',
+            'class' => 'navigation bemain',
             'href'  => $this->router->generate('backend_maintest')
         ];
 
         if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') {
-            $arrModules['content']['modules']['bemain']['class'] .= ' active';
+            $arrModules['content']['modules']['bemain']['class'] .= ' active'; // altes BE Theme
+            $arrModules['content']['modules']['bemain']['isActive'] = true;    // neues BE Theme
+            
         }
 
         return $arrModules;

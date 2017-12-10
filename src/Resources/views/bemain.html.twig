@@ -1,4 +1,4 @@
-{# src/AppBundle/Resources/views/test.html.twig #}
+{# src/AppBundle/Resources/views/bemain.html.twig #}
 {% extends "@ContaoCore/Backend/be_page.html.twig" %}
 
 {% block headline %}
@@ -10,5 +10,5 @@
 {% endblock %}
 
 {% block main %}
-    Main Content.
+    {{ main | raw }}
 {% endblock %}
