@@ -29,7 +29,7 @@ class UserNavigationListener
             'title' => 'A backend route test module',
             'label' => 'Be Main Test',
             'class' => 'navigation bemain',
-            'href'  => $this->router->generate('backend_maintest')
+            'href'  => $this->router->generate('backend_maintest') // backend_maintest = Name der Route
         ];
 
         if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') 
