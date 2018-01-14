@@ -24,8 +24,9 @@ class BackendController extends Controller
     public function bemainAction()
     {
         return [
-            'main' => '<br>Content from the BE Controller Action',
-            'link' => '<br><a href="'.$this->generateUrl('backend_details').'">Link zur Backend Details Route<a/>'
+            'main' => '<br>Content from the BE Controller Main Action',
+            'link' => '<br><a onclick="Backend.openModalIframe({\'width\':780,\'height\':600,\'title\':\'Details\',\'url\':this.href});return false"  
+                              href="'.$this->generateUrl('backend_details').'">Link to BE Controller Details Action<a/>'
         ];
     }
     

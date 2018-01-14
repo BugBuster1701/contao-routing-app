@@ -40,6 +40,7 @@ class UserNavigationListener
         }
         
         //use app_dev.php to dump
+        //dump from Symfony\Component\VarDumper\VarDumper
         //dump($arrModules['content']['modules']);
         
 
