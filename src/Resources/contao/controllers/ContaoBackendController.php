@@ -53,6 +53,6 @@ class ContaoBackendController extends \Backend
 		$objTemplate->title    = $this->headline;
 		$objTemplate->id       = $this->id;
 
-		return $objTemplate->getResponse();
+		return $objTemplate->getResponse(); // compile and new Response()...
 	}
 }

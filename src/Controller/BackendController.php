@@ -8,6 +8,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use BugBuster\Routingapp\ContaoBackendController;
 
 /**
+ * Handles back end routes.
+ * 
  * @Route("/routingapp", defaults={
  *     "_scope" = "backend",
  *     "_token_check" = true,
@@ -24,9 +26,9 @@ class BackendController extends Controller
     public function bemainAction()
     {
         return [
-            'main' => '<br>Content from the BE Controller Main Action',
-            'link' => '<br><a onclick="Backend.openModalIframe({\'width\':780,\'height\':600,\'title\':\'Details\',\'url\':this.href});return false"  
-                              href="'.$this->generateUrl('backend_details').'">Link to BE Controller Details Action<a/>'
+            'main' => '<br><p>Content from the BE Controller Main Action</p>',
+            'link' => '<br><p><a onclick="Backend.openModalIframe({\'width\':780,\'height\':600,\'title\':\'Details\',\'url\':this.href});return false"  
+                              href="'.$this->generateUrl('backend_details').'">Link to BE Controller Details Action<a/></p>'
         ];
     }
     
