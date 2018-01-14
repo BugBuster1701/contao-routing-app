@@ -41,7 +41,7 @@ class FrontendController extends Controller
        <h1>Frontend Route</h2>
        <img src="https://www.contao-konferenz.de/files/userdata/various/contao-konferenz.svg"
 	        width="660" height="202" alt="Contao Konferenz 2018" title="Contao Konferenz 2018">
-       <p>Parameter: '.$height.'x'.$width.'</p>
+       <p>Parameter: '.$height.' '.$width.'</p>
 </body>
 </html>';
         $objResponse = new Response($strBuffer);
