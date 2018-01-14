@@ -22,9 +22,14 @@ class FrontendController extends Controller
      *
      * @return Response
      *
-     * @Route("/demo", name="frontend_demo")
+     * @Route("/demo/{height}/{width}", name="frontend_demo", 
+     *                                  requirements={
+     *                                      "height"="\d+",
+     *                                      "width"="\d+"
+     *                                  }
+     *  )
      */
-    public function demoAction()
+    public function demoAction($height = 0, $width = 0)
     {
         $strBuffer = '<!DOCTYPE html>
 <html lang="de">
@@ -36,6 +41,7 @@ class FrontendController extends Controller
        <h1>Frontend Route</h2>
        <img src="https://www.contao-konferenz.de/files/userdata/various/contao-konferenz.svg"
 	        width="660" height="202" alt="Contao Konferenz 2018" title="Contao Konferenz 2018">
+       <p>Parameter: '.$height.'x'.$width.'</p>
 </body>
 </html>';
         $objResponse = new Response($strBuffer);
