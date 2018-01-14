@@ -5,6 +5,7 @@ namespace BugBuster\RoutingappBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use BugBuster\Routingapp\ContaoBackendController;
 
 /**
  * @Route("/routingapp", defaults={
@@ -23,7 +24,22 @@ class BackendController extends Controller
     public function bemainAction()
     {
         return [
-            'main' => '<br>Content from the BE Controller Action'
+            'main' => '<br>Content from the BE Controller Action',
+            'link' => '<br><a href="'.$this->generateUrl('backend_details').'">Link zur Backend Details Route<a/>'
         ];
+    }
+    
+    /**
+     * Renders the details content.
+     *
+     * @return Response
+     *
+     * @Route("/details", name="backend_details")
+     */
+    public function detailsAction()
+    {
+        $this->container->get('contao.framework')->initialize();
+        $controller = new ContaoBackendController();
+        return $controller->run();
     }
 }
