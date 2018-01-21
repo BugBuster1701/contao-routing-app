@@ -39,8 +39,8 @@ class FrontendController extends Controller
 </head>
 <body>
        <h1>Frontend Route</h2>
-       <img src="https://www.contao-konferenz.de/files/userdata/various/contao-konferenz.svg"
-	        width="660" height="202" alt="Contao Konferenz 2018" title="Contao Konferenz 2018">
+       <img src="http://contao-nordtag.de/files/themes/nordtag/images/contao-nordtag_logo_2018_rgb.svg"
+	        width="660" height="202" alt="Contao Nordtag 2018" title="Contao Nordtag 2018">
        <p>Parameter: '.$height.' '.$width.'</p>
 </body>
 </html>';
