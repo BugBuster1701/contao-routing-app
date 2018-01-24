@@ -1,3 +1,7 @@
-backend_test:
-    resource: "@BugBuster/RoutingappBundle/Controller"
+backend_maintest:
+    resource: "@BugBusterRoutingappBundle/Controller"
+    type: annotation
+
+frontend_demo:
+    resource: "@BugBusterRoutingappBundle/Controller"
     type: annotation

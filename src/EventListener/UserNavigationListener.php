@@ -13,21 +13,36 @@ class UserNavigationListener
     public function __construct(RequestStack $requestStack, RouterInterface $router)
     {
         $this->requestStack = $requestStack;
-        $this->router = $router;
+        $this->router       = $router;
     }
 
+    /**
+     * onGetUserNavigation
+     * 
+     * @param array $arrModules     The compiled list of back end modules.
+     * @param boolean $blnShowAll   Wether to show all modules even if the group is collapsed.
+     * @return array                Add your custom modules to the list and return the array of back end modules.
+     */
     public function onGetUserNavigation($arrModules, $blnShowAll)
     {
-        $arrModules['content']['modules']['test'] = [
+        $arrModules['content']['modules']['bemain'] = [
             'title' => 'A backend route test module',
-            'label' => 'Test',
-            'class' => 'navigation test',
-            'href'  => $this->router->generate('backend_test')
+            'label' => 'Be Main Test',
+            'class' => 'navigation bemain',
+            'href'  => $this->router->generate('backend_maintest') // backend_maintest = Name der Route
         ];
 
-        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'test') {
-            $arrModules['content']['modules']['test']['class'] .= ' active';
+        if ($this->requestStack->getCurrentRequest()->attributes->get('_backend_module') === 'bemain') 
+        {
+            $arrModules['content']['modules']['bemain']['class'] .= ' active'; // altes BE Theme
+            $arrModules['content']['modules']['bemain']['isActive'] = true;    // neues BE Theme
+            
         }
+        
+        //use app_dev.php to dump
+        //dump from Symfony\Component\VarDumper\VarDumper
+        //dump($arrModules['content']['modules']);
+        
 
         return $arrModules;
     }
