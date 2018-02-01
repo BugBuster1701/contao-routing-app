@@ -3,5 +3,14 @@ backend_maintest:
     type: annotation
 
 frontend_demo:
-    resource: "@BugBusterRoutingappBundle/Controller"
-    type: annotation
+    path:     /routingapp_fe/demo/{height}/{width}
+    defaults: 
+        _controller: RoutingappBundle:Frontend:demo
+        _scope: frontend
+        _token_check: false
+        height: 0
+        width:  0
+    requirements:
+        height: '\d+'
+        width:  '\d+'
+

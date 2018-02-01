@@ -2,7 +2,7 @@
 // src/AppBundle/Controller/FrontendController.php
 namespace BugBuster\RoutingappBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -10,10 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Handles front end routes.
  *
- * @Route("/routingapp_fe", defaults={
- *     "_scope" = "frontend", 
- *     "_token_check" = false
- * })
  */
 class FrontendController extends Controller
 {
@@ -22,12 +18,6 @@ class FrontendController extends Controller
      *
      * @return Response
      *
-     * @Route("/demo/{height}/{width}", name="frontend_demo", 
-     *                                  requirements={
-     *                                      "height"="\d+",
-     *                                      "width"="\d+"
-     *                                  }
-     *  )
      */
     public function demoAction($height = 0, $width = 0)
     {
