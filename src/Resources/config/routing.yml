@@ -5,7 +5,7 @@ backend_maintest:
 frontend_demo:
     path:     /routingapp_fe/demo/{height}/{width}
     defaults: 
-        _controller: RoutingappBundle:Frontend:demo
+        _controller: BugBusterRoutingappBundle:Frontend:demo
         _scope: frontend
         _token_check: false
         height: 0
