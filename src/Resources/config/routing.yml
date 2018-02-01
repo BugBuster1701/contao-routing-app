@@ -1,6 +1,18 @@
 backend_maintest:
-    resource: "@BugBusterRoutingappBundle/Controller"
-    type: annotation
+    path:     /routingapp/main
+    defaults: 
+        _controller: BugBusterRoutingappBundle:Backend:bemain
+        _scope: backend
+        _token_check: true
+        _custom_backend_view: true
+        _backend_module: bemain
+
+backend_details:
+    path:     /routingapp/details
+    defaults: 
+        _controller: BugBusterRoutingappBundle:Backend:details
+        _scope: backend
+        _token_check: true
 
 frontend_demo:
     path:     /routingapp_fe/demo/{height}/{width}

@@ -3,25 +3,16 @@
 namespace BugBuster\RoutingappBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use BugBuster\Routingapp\ContaoBackendController;
 
 /**
  * Handles back end routes.
  * 
- * @Route("/routingapp", defaults={
- *     "_scope" = "backend",
- *     "_token_check" = true,
- *     "_custom_backend_view" = true,
- *     "_backend_module" = "bemain"
- * })
  */
 class BackendController extends Controller
 {
     /**
-     * @Route("/main", name="backend_maintest")
-     * @Template("BugBusterRoutingappBundle::bemain.html.twig")
+     * Template("BugBusterRoutingappBundle::bemain.html.twig")
      */
     public function bemainAction()
     {
@@ -37,7 +28,6 @@ class BackendController extends Controller
      *
      * @return Response
      *
-     * @Route("/details", name="backend_details")
      */
     public function detailsAction()
     {
