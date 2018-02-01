@@ -26,3 +26,12 @@ frontend_demo:
         height: '\d+'
         width:  '\d+'
 
+frontend_demo_remove_trailing_slash:
+    path:     /routingapp_fe/demo/{url}
+    defaults:
+        _controller: BugBusterRoutingappBundle:Frontend:removeTrailingSlash
+        _scope: frontend
+        _token_check: false
+    requirements:
+        url: .*/$
+    methods: [GET]
