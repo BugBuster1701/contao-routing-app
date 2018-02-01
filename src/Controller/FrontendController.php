@@ -19,7 +19,7 @@ class FrontendController extends Controller
      * @return Response
      *
      */
-    public function demoAction($height = 0, $width = 0)
+    public function demoAction($height, $width)
     {
         $strBuffer = '<!DOCTYPE html>
 <html lang="de">
