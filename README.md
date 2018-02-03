@@ -11,6 +11,11 @@ Die Beispiele zeigen nicht alle Möglichkeiten. Näheres dazu im Vortrag.
 Die Beispiele dienen unter anderem als Anschauungsmaterial für den Vortrag auf dem Contao Nordtag 2018 am 27.1. in Hamburg.
 
 
+## Changelog
+* [Version 1.0.0](https://github.com/BugBuster1701/contao-routing-app/tree/1.0.0): Entspricht dem Stand zum Zeitpunkt des Contao Nordtag Vortrages
+* [Version 2.0.0](https://github.com/BugBuster1701/contao-routing-app/tree/2.0.0): Routing nun ohne Annotations, alle Angaben in der routing.yml
+
+
 ## Frontend Route
 Symfony Controller, mit Paramater Auswertung.
 

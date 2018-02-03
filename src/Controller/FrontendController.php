@@ -2,9 +2,9 @@
 // src/AppBundle/Controller/FrontendController.php
 namespace BugBuster\RoutingappBundle\Controller;
 
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 
 /**
@@ -19,7 +19,7 @@ class FrontendController extends Controller
      * @return Response
      *
      */
-    public function demoAction($height = 0, $width = 0)
+    public function demoAction($height, $width)
     {
         $strBuffer = '<!DOCTYPE html>
 <html lang="de">
@@ -37,5 +37,21 @@ class FrontendController extends Controller
         $objResponse = new Response($strBuffer);
         $objResponse->headers->set('Content-Type', 'text/html; charset=UTF-8');
         return $objResponse;
+    }
+    
+    /**
+     * Redirect URLs with a Trailing Slash
+     * 
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function removeTrailingSlashAction(Request $request)
+    {
+        $pathInfo   = $request->getPathInfo();
+        $requestUri = $request->getRequestUri();
+        
+        $url = str_replace($pathInfo, rtrim($pathInfo, ' /'), $requestUri);
+        
+        return $this->redirect($url, 301);
     }
 }
