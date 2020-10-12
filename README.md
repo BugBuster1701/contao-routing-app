@@ -1,4 +1,4 @@
-# Contao-Routing-App
+# Contao-Routing-App (DEMO! Routing macht Contao selbst!)
 Code Beispiele für die drei Routing Arten in Contao 4
 
 - [x] Frontend
